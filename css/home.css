@@ -47,7 +47,7 @@ html{
 	position: absolute;
 	bottom: 0px;
 	padding-top: 10px;
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 	text-align: center;
 	border-bottom: 1px solid #eef1f8;
 	background: rgba(255,255,255,.9);
@@ -96,7 +96,7 @@ html{
 }
 .navigater-list>a {
 	padding: 25px 20px 25px 20px;
-	line-height: 60px;
+	line-height: 50px; #60px;
 }
 .home-bg{
 	width: 100%;
