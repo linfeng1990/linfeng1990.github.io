@@ -86,7 +86,7 @@ html{
     bottom: inherit;
     z-index: 99;
     background: rgba(255,255,255,.95);
-    transition: background 6s;
+    transition: background 2s;
 }
 .navigater-list{
 	font-family: "Microsoft YaHei","微软雅黑",Arial,simsun,"宋体";

@@ -6,7 +6,7 @@
   <title>非著名林峰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    <meta name="keywords" content="c,c++,java,linux,touch,fingerprint,lcm" />
+    <meta name="keywords" content="c,c++,java,python,linux,touch,fingerprint,lcm" />
   
   
   
@@ -108,7 +108,7 @@
                   
                     <div class="item">
                   
-                    <img id="carousel-img1" src="https://source.unsplash.com/collection/954550/1920x1080">
+                    <img id="carousel-img1" src="/css/images/sample.jpg">
                   </div>
 
                   <!-- 自适应大图 -->
@@ -122,6 +122,48 @@
                         } else {
                           imageTag1.style.height = document.body.clientHeight + "px";
                           imageTag1.style.marginLeft = -(document.body.clientHeight * img1.width / img1.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img2" src="/css/images/sample1.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img2 = new Image();
+                      var imageTag2 = document.getElementById("carousel-img2");
+                      img2.src = imageTag2.src;
+                      img2.onload=function(){
+                        if (img2.width / img2.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag2.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag2.style.height = document.body.clientHeight + "px";
+                          imageTag2.style.marginLeft = -(document.body.clientHeight * img2.width / img2.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img3" src="https://source.unsplash.com/collection/954550/1920x1080">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img3 = new Image();
+                      var imageTag3 = document.getElementById("carousel-img3");
+                      img3.src = imageTag3.src;
+                      img3.onload=function(){
+                        if (img3.width / img3.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag3.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag3.style.height = document.body.clientHeight + "px";
+                          imageTag3.style.marginLeft = -(document.body.clientHeight * img3.width / img3.height - document.body.clientWidth) / 2 + "px";
                         }
                       };
                   </script>
@@ -250,7 +292,7 @@
         
           <section id="main" style="float:none;">
   
-    <article id="post-Hiker主题预览"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-【Machine Learning】机器学习：简明入门指南"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -258,7 +300,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2016/10/24/Hiker主题预览/">Hiker主题预览</a>
+      <a class="article-title" href="/2017/10/04/【Machine Learning】机器学习：简明入门指南/">【Machine Learning】机器学习：简明入门指南</a>
     </h1>
   
 
@@ -266,37 +308,30 @@
     
     <div class="article-meta">
       
-	<a href="/2016/10/24/Hiker主题预览/" class="article-date">
-	  <time datetime="2016-10-24T03:07:20.000Z" itemprop="datePublished">2016-10-24</time>
+	<a href="/2017/10/04/【Machine Learning】机器学习：简明入门指南/" class="article-date">
+	  <time datetime="2017-10-04T00:32:55.000Z" itemprop="datePublished">2017-10-04</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Hiker主题预览"><a href="#Hiker主题预览" class="headerlink" title="Hiker主题预览"></a>Hiker主题预览</h2><p>Hiker is an attractive theme for <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>. called “Hiker”, short for “HikerNews”. </p>
-<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/homepage-index.png" alt=""></p>
-<p><img src="https://itimetraveler.github.io/hexo-theme-hiker/2016/10/24/Hiker%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/article-chrome.png" alt=""></p>
-        <!-- Hiker主题预览Hiker is an attractive theme for Hexo. called “Hiker”, short for “HikerNews”. 
+        <blockquote>
+<p>本文是一篇转载自<a href="http://blog.jobbole.com/67616/" target="_blank" rel="external"><strong>伯乐在线的译文</strong></a>，英文原文是这里：<a href="https://medium.com/code-poet/80ea3ec3c471" target="_blank" rel="external"><strong>Machine Learning is Fun!</strong> — by Adam Geitgey</a></p>
+</blockquote>
+<p>在听到人们谈论机器学习的时候，你是不是对它的涵义只有几个模糊的认识呢？你是不是已经厌倦了在和同事交谈时只能一直点头？让我们改变一下吧！</p>
+<p>本指南的读者对象是所有对机器学习有求知欲但却不知道如何开头的朋友。我猜很多人已经读过了<a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank" rel="external">“机器学习” ——维基百科词条</a>，倍感挫折，以为没人能给出一个高层次的解释。本文就是你们想要的东西。</p>
+<p>本文目标在于平易近人，这意味着文中有大量的概括。但是谁在乎这些呢？只要能让读者对于ML更感兴趣，任务也就完成了。</p>
+        <!-- 
+本文是一篇转载自伯乐在线的译文，英文原文是这里：Machine Learning is Fun! — by Adam Geitgey
 
-
-
-
-
-
-
-
-
-
-
-
-
-...  -->
+在听到人们谈论机器学习的时候，你是不是对它的涵义只有几个模糊的认识呢？你是不是已经厌倦了在和同事交谈时只能一直点头？让我们改变一下吧！
+本指南的读者对象是所有对机器学习有求知欲但却不知道如何开头的朋友。我猜很多人已经读过了“机器学习” ——维基百科词条，倍......  -->
         <p class="article-more-link">
-          <a href="/2016/10/24/Hiker主题预览/#more">阅读全文</a>
+          <a href="/2017/10/04/【Machine Learning】机器学习：简明入门指南/#more">阅读全文</a>
         </p>
       
     </div>
@@ -304,7 +339,7 @@
       
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a></li></ul>
 
     </footer>
   </div>
@@ -314,7 +349,7 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-Chinese-Test"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-BAT人才体系的职位层级、薪酬、晋升标准大全"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -322,7 +357,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2015/01/26/Chinese-Test/">中文测试</a>
+      <a class="article-title" href="/2017/10/02/BAT人才体系的职位层级、薪酬、晋升标准大全/">BAT人才体系的职位层级、薪酬、晋升标准</a>
     </h1>
   
 
@@ -330,23 +365,46 @@
     
     <div class="article-meta">
       
-	<a href="/2015/01/26/Chinese-Test/" class="article-date">
-	  <time datetime="2015-01-26T13:55:37.000Z" itemprop="datePublished">2015-01-26</time>
+	<a href="/2017/10/02/BAT人才体系的职位层级、薪酬、晋升标准大全/" class="article-date">
+	  <time datetime="2017-10-02T03:06:00.000Z" itemprop="datePublished">2017-10-02</time>
 	</a>
 
       
+    <a class="article-category-link" href="/categories/BAT/">BAT</a>
+
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="桃花源记"><a href="#桃花源记" class="headerlink" title="桃花源记"></a>桃花源记</h2><h3 id="朝代：魏晋"><a href="#朝代：魏晋" class="headerlink" title="朝代：魏晋"></a>朝代：魏晋</h3><h3 id="作者：陶渊明"><a href="#作者：陶渊明" class="headerlink" title="作者：陶渊明"></a>作者：陶渊明</h3><h3 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h3><p>　　晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷，渔人甚异之。复前行，欲穷其林。</p>
-<p>　　林尽水源，便得一山，山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然，有良田美池桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。</p>
-        <!-- 桃花源记朝代：魏晋作者：陶渊明原文：　　晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷，渔人甚异之。复前行，欲穷其林。
-　　林尽水源，便得一山，山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然，有良田美池桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。
+        <blockquote>
+<p>互联网圈有这么一句话：百度的技术，阿里的运营，腾讯的产品。那么代表互联网三座大山的BAT，内部人才体系有什么区别呢？可以先看看这个话题<a href="https://www.zhihu.com/question/27108669" target="_blank" rel="external">百度、腾讯和阿里内部的级别和薪资待遇是什么样的？</a></p>
+</blockquote>
+<h3 id="★-腾讯-★"><a href="#★-腾讯-★" class="headerlink" title="★ 腾讯 ★"></a><strong>★ 腾讯 ★</strong></h3><h4 id="1、职级"><a href="#1、职级" class="headerlink" title="1、职级"></a><strong>1、职级</strong></h4><p>腾讯职级体系分6级，最低1级，最高6级。同时按照岗位又划分为四大通道，内部也叫“族”，比如：</p>
+<p>产品/项目通道，简称P族<br>技术通道，简称T族<br>市场通道，简称M族<br>职能通道，简称S族</p>
+<p>以T族为例，分别为：</p>
+<ul>
+<li><p>T1：助理工程师 （一般为校招新人）</p>
+</li>
+<li><p>T2：工程师</p>
+</li>
+<li><p>T3：高级工程师 3-1相当于阿里的p6+到p7（能力强可能到p7）</p>
+</li>
+<li><p>T4：专家工程师</p>
+</li>
+<li><p>T5：科学家</p>
+</li>
+<li><p>T6：首席科学家</p>
+</li>
+</ul>
+        <!-- 
 
-　......  -->
+互联网圈有这么一句话：百度的技术，阿里的运营，腾讯的产品。那么代表互联网三座大山的BAT，内部人才体系有什么区别呢？可以先看看这个话题百度、腾讯和阿里内部的级别和薪资待遇是什么样的？
+
+★ 腾讯 ★1、职级腾讯职级体系分6级，最低1级，最高6级。同时按照岗位又划分为四大通道，内部也叫“族”，比如：
+产品/项目通道，简称P族技术通道，简称T族市场通道，简称M族职能通道，简称S族
+以T族为例......  -->
         <p class="article-more-link">
-          <a href="/2015/01/26/Chinese-Test/#more">阅读全文</a>
+          <a href="/2017/10/02/BAT人才体系的职位层级、薪酬、晋升标准大全/#more">阅读全文</a>
         </p>
       
     </div>
@@ -354,6 +412,8 @@
       
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BAT/">BAT</a></li></ul>
+
     </footer>
   </div>
   
@@ -370,7 +430,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2014/12/25/Markdown/">Markdown</a>
+      <a class="article-title" href="/2017/10/01/Markdown/">Markdown</a>
     </h1>
   
 
@@ -378,8 +438,8 @@
     
     <div class="article-meta">
       
-	<a href="/2014/12/25/Markdown/" class="article-date">
-	  <time datetime="2014-12-24T16:31:00.000Z" itemprop="datePublished">2014-12-25</time>
+	<a href="/2017/10/01/Markdown/" class="article-date">
+	  <time datetime="2017-09-30T16:31:00.000Z" itemprop="datePublished">2017-10-01</time>
 	</a>
 
       
@@ -426,7 +486,7 @@ Lists
 Code Blocks
 Ho......  -->
         <p class="article-more-link">
-          <a href="/2014/12/25/Markdown/#more">阅读全文</a>
+          <a href="/2017/10/01/Markdown/#more">阅读全文</a>
         </p>
       
     </div>
