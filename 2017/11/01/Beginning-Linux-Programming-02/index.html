@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>beginning linux programming 01 | 非著名林峰</title>
+  <title>beginning linux programming 02 | 非著名林峰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="c,c++,java,python,linux,touch,fingerprint,lcm" />
@@ -11,20 +11,18 @@
   
   
   
-  <meta name="description" content="Linux 程序设计Linux程序 /bin: 二进制文件，用于存放启动系统时用到的程序 /usr/bin: 用户二进制文件目录，用于存放用户使用的标准程序 /usr/local/bin: 本地二进制文件目录，用于存放软件安装程序  文本编辑器vim,Emacs C编译器GCC  测试程序,保存为hello.c文件  12345678#include &amp;lt;stdio.h&amp;gt;#include">
+  <meta name="description" content="shell 程序设计管道和重定向重定向输出12345//把ls命令输出保存在文件lsoutput.txt文件中$ ls -l &amp;gt; lsoutput.txt// 用&amp;gt;&amp;gt;操作符把ps命令的输出内容附件到文件尾部$ ps &amp;gt;&amp;gt; lsoutput.txt shell 的语法 变量： 字符串、数字、环境和参数 条件： shell 中的bool值 程序控制： if、elif、fo">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Beginning Linux Programming 01">
-<meta property="og:url" content="https://linfeng1990.github.io/2017/10/31/Beginning-Linux-Programming-01/index.html">
+<meta property="og:title" content="Beginning Linux Programming 02">
+<meta property="og:url" content="https://linfeng1990.github.io/2017/11/01/Beginning-Linux-Programming-02/index.html">
 <meta property="og:site_name" content="非著名林峰">
-<meta property="og:description" content="Linux 程序设计Linux程序 /bin: 二进制文件，用于存放启动系统时用到的程序 /usr/bin: 用户二进制文件目录，用于存放用户使用的标准程序 /usr/local/bin: 本地二进制文件目录，用于存放软件安装程序  文本编辑器vim,Emacs C编译器GCC  测试程序,保存为hello.c文件  12345678#include &amp;lt;stdio.h&amp;gt;#include">
+<meta property="og:description" content="shell 程序设计管道和重定向重定向输出12345//把ls命令输出保存在文件lsoutput.txt文件中$ ls -l &amp;gt; lsoutput.txt// 用&amp;gt;&amp;gt;操作符把ps命令的输出内容附件到文件尾部$ ps &amp;gt;&amp;gt; lsoutput.txt shell 的语法 变量： 字符串、数字、环境和参数 条件： shell 中的bool值 程序控制： if、elif、fo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://linfeng1990.github.io/2017/10/31/Beginning-Linux-Programming-01/lib.png">
-<meta property="og:updated_time" content="2017-10-31T16:49:21.081Z">
+<meta property="og:updated_time" content="2017-11-02T10:38:49.386Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Beginning Linux Programming 01">
-<meta name="twitter:description" content="Linux 程序设计Linux程序 /bin: 二进制文件，用于存放启动系统时用到的程序 /usr/bin: 用户二进制文件目录，用于存放用户使用的标准程序 /usr/local/bin: 本地二进制文件目录，用于存放软件安装程序  文本编辑器vim,Emacs C编译器GCC  测试程序,保存为hello.c文件  12345678#include &amp;lt;stdio.h&amp;gt;#include">
-<meta name="twitter:image" content="https://linfeng1990.github.io/2017/10/31/Beginning-Linux-Programming-01/lib.png">
+<meta name="twitter:title" content="Beginning Linux Programming 02">
+<meta name="twitter:description" content="shell 程序设计管道和重定向重定向输出12345//把ls命令输出保存在文件lsoutput.txt文件中$ ls -l &amp;gt; lsoutput.txt// 用&amp;gt;&amp;gt;操作符把ps命令的输出内容附件到文件尾部$ ps &amp;gt;&amp;gt; lsoutput.txt shell 的语法 变量： 字符串、数字、环境和参数 条件： shell 中的bool值 程序控制： if、elif、fo">
   
     <link rel="alternate" href="/atom.xml" title="非著名林峰" type="application/atom+xml">
   
@@ -166,7 +164,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-Beginning-Linux-Programming-01" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-Beginning-Linux-Programming-02" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -174,7 +172,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      Beginning Linux Programming 01
+      Beginning Linux Programming 02
     </h1>
   
 
@@ -182,8 +180,8 @@
     
     <div class="article-meta">
       
-	<a href="/2017/10/31/Beginning-Linux-Programming-01/" class="article-date">
-	  <time datetime="2017-10-31T15:11:11.000Z" itemprop="datePublished">2017-10-31</time>
+	<a href="/2017/11/01/Beginning-Linux-Programming-02/" class="article-date">
+	  <time datetime="2017-10-31T16:52:25.000Z" itemprop="datePublished">2017-11-01</time>
 	</a>
 
       
@@ -199,28 +197,68 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Linux-程序设计"><a href="#Linux-程序设计" class="headerlink" title="Linux 程序设计"></a>Linux 程序设计</h2><h3 id="Linux程序"><a href="#Linux程序" class="headerlink" title="Linux程序"></a>Linux程序</h3><ul>
-<li>/bin: 二进制文件，用于存放启动系统时用到的程序</li>
-<li>/usr/bin: 用户二进制文件目录，用于存放用户使用的标准程序</li>
-<li>/usr/local/bin: 本地二进制文件目录，用于存放软件安装程序</li>
+        <h1 id="shell-程序设计"><a href="#shell-程序设计" class="headerlink" title="shell 程序设计"></a>shell 程序设计</h1><h2 id="管道和重定向"><a href="#管道和重定向" class="headerlink" title="管道和重定向"></a>管道和重定向</h2><h3 id="重定向输出"><a href="#重定向输出" class="headerlink" title="重定向输出"></a>重定向输出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//把ls命令输出保存在文件lsoutput.txt文件中</div><div class="line">$ ls -l &gt; lsoutput.txt</div><div class="line"></div><div class="line">// 用&gt;&gt;操作符把ps命令的输出内容附件到文件尾部</div><div class="line">$ ps &gt;&gt; lsoutput.txt</div></pre></td></tr></table></figure>
+<h2 id="shell-的语法"><a href="#shell-的语法" class="headerlink" title="shell 的语法"></a>shell 的语法</h2><ul>
+<li>变量： 字符串、数字、环境和参数</li>
+<li>条件： shell 中的bool值</li>
+<li>程序控制： if、elif、for、while、until、case</li>
+<li>命令列表</li>
+<li>函数</li>
+<li>shell 内置命令</li>
+<li>获取命令的执行结果</li>
+<li>here文档</li>
 </ul>
-<h3 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h3><p>vim,Emacs</p>
-<h3 id="C编译器"><a href="#C编译器" class="headerlink" title="C编译器"></a>C编译器</h3><p>GCC</p>
-<blockquote>
-<p>测试程序,保存为hello.c文件</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World\n"</span>);</div><div class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>编译、链接、运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ gcc -o hello hello.c</div><div class="line">$ ./hello</div></pre></td></tr></table></figure>
-<h3 id="开发系统引导"><a href="#开发系统引导" class="headerlink" title="开发系统引导"></a>开发系统引导</h3><h4 id="应用程序"><a href="#应用程序" class="headerlink" title="应用程序"></a>应用程序</h4><h4 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h4><p>可以用 -I标志来包含保存在子目录或非标位置中的头文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gcc -I/usr/openwin/include/ fred.c</div></pre></td></tr></table></figure>
-<p>grep 命令搜索定义和函数原型如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ grep EXIT_ *h //在当前目录下所有的.h文件中搜索“EXIT_”字符串</div></pre></td></tr></table></figure></p>
-<h4 id="库文件"><a href="#库文件" class="headerlink" title="库文件"></a>库文件</h4><ul>
-<li>.a 静态函数库</li>
-<li>.so 共享函数库</li>
-</ul>
-<img src="/2017/10/31/Beginning-Linux-Programming-01/lib.png" alt="&nbsp;" title="&nbsp;">
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><pre><code>区分大小写，不需要声明，默认被看做字符串并以字符串存储。
+</code></pre><h3 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h3><pre><code>检查一个文件是否存在： test -f &lt;filename&gt;。
+test 使用条件的类型归为3类: 字符串的比较、算术比较和文件相关的条件测试。
 
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">test condition/cmd ;then</div><div class="line">...</div><div class="line">else</div><div class="line">...</div><div class="line">fi</div></pre></td></tr></table></figure>
+</code></pre><h3 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h3><ol>
+<li><p>if 语句</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if [[ condition ]]; then</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">elif [[ condition ]]; then</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">else</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">fi</div></pre></td></tr></table></figure>
+</li>
+<li><p>for 语句</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for variable in value; do</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">done</div></pre></td></tr></table></figure>
+</li>
+<li><p>while</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">while [[ condition ]]; do</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">done</div></pre></td></tr></table></figure>
+</li>
+<li><p>until</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">until [[ condition ]]; do</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">done</div></pre></td></tr></table></figure>
+</li>
+<li><p>case</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">case word in</div><div class="line">  pattern )</div><div class="line">    ;;</div><div class="line">esac</div></pre></td></tr></table></figure>
+</li>
+<li><p>命令列表</p>
+<p> AND 列表</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">statements1 &amp;&amp; statements2 &amp;&amp; ...</div></pre></td></tr></table></figure>
+<p> OR 列表</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">statements1 || statements2 || ...</div></pre></td></tr></table></figure>
+</li>
+<li><p>语句块<br>如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">get_confirm &amp;&amp; &#123;</div><div class="line">  grep -v "$cdcatnum" $tracks_file &gt; $temp_file</div><div class="line">  cat $temp_file &gt; $tracks_file</div><div class="line">  echo</div><div class="line">  add_record_tracks</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function_name () &#123;</div><div class="line">  statements</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><p>： 命令是一个空命令，相当于true</p>
+<p>continue</p>
+<p>. 在当前目录中执行</p>
+<p>echo</p>
+<p>eval:允许对参数进行求值</p>
+<p>exec:将当前的shell替换为一个不同的程序</p>
+<p>exit： 126文件不可执行/127命令未找到/128 出现一个信号</p>
+<p>export： 将作为他参数的变量导出到子shell中，并使之在子shell中有效</p>
+<p>expr: 将它的参数当做一个表达式来求值</p>
+<p>printf： “format string” parameter1 parameter2 …</p>
+<p>set: 为shell设置参数变量</p>
+<p>shift： 左移参数</p>
+<p>trap：指定在接收到信号后要采取的行动</p>
+<p>unset： 从环境中删除变量或者函数</p>
+<p>find： find / -mount -name test -print</p>
+<pre><code>find [path] [options] [tests] [actions]
+</code></pre><p>grep: 使用一个选项、一个要匹配的模式和要搜索的文件</p>
+<pre><code>grep [options] PATTERN [FILES]
+</code></pre>
       
     </div>
     <footer class="article-footer">
@@ -260,19 +298,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/01/Beginning-Linux-Programming-02/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          Beginning Linux Programming 02
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/04/【Machine Learning】机器学习：简明入门指南/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/10/31/Beginning-Linux-Programming-01/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">【Machine Learning】机器学习：简明入门指南</div>
+      <div class="article-nav-title">Beginning Linux Programming 01</div>
     </a>
   
 </nav>
@@ -286,7 +315,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-程序设计"><span class="nav-number">1.</span> <span class="nav-text">Linux 程序设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux程序"><span class="nav-number">1.1.</span> <span class="nav-text">Linux程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本编辑器"><span class="nav-number">1.2.</span> <span class="nav-text">文本编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C编译器"><span class="nav-number">1.3.</span> <span class="nav-text">C编译器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发系统引导"><span class="nav-number">1.4.</span> <span class="nav-text">开发系统引导</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用程序"><span class="nav-number">1.4.1.</span> <span class="nav-text">应用程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#头文件"><span class="nav-number">1.4.2.</span> <span class="nav-text">头文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#库文件"><span class="nav-number">1.4.3.</span> <span class="nav-text">库文件</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#shell-程序设计"><span class="nav-number">1.</span> <span class="nav-text">shell 程序设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#管道和重定向"><span class="nav-number">1.1.</span> <span class="nav-text">管道和重定向</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重定向输出"><span class="nav-number">1.1.1.</span> <span class="nav-text">重定向输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell-的语法"><span class="nav-number">1.2.</span> <span class="nav-text">shell 的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">1.2.1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件"><span class="nav-number">1.2.2.</span> <span class="nav-text">条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制语句"><span class="nav-number">1.2.3.</span> <span class="nav-text">控制语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">1.2.4.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令"><span class="nav-number">1.2.5.</span> <span class="nav-text">命令</span></a></li></ol></li></ol></li></ol>
     
     </div>
   </aside>
