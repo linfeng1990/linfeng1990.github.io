@@ -215,16 +215,16 @@ test 使用条件的类型归为3类: 字符串的比较、算术比较和文件
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">test condition/cmd ;then</div><div class="line">...</div><div class="line">else</div><div class="line">...</div><div class="line">fi</div></pre></td></tr></table></figure>
 </code></pre><h3 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h3><ol>
 <li><p>if 语句</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if [[ condition ]]; then</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">elif [[ condition ]]; then</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">else</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">fi</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if [[ condition ]]; then</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">elif [[ condition ]]; then</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">else</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">fi</div></pre></td></tr></table></figure>
 </li>
 <li><p>for 语句</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for variable in value; do</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">done</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for variable in value; do</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">done</div></pre></td></tr></table></figure>
 </li>
 <li><p>while</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">while [[ condition ]]; do</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">done</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">while [[ condition ]]; do</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">done</div></pre></td></tr></table></figure>
 </li>
 <li><p>until</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">until [[ condition ]]; do</div><div class="line"><span class="meta">  #</span><span class="bash">statements</span></div><div class="line">done</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">until [[ condition ]]; do</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">done</div></pre></td></tr></table></figure>
 </li>
 <li><p>case</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">case word in</div><div class="line">  pattern )</div><div class="line">    ;;</div><div class="line">esac</div></pre></td></tr></table></figure>
@@ -297,6 +297,15 @@ test 使用条件的类型归为3类: 字符串的比较、算术比较和文件
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/11/08/Beginning-Linux-Programming-03/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Beginning-Linux-Programming-03
+        
+      </div>
+    </a>
   
   
     <a href="/2017/10/31/Beginning-Linux-Programming-01/" id="article-nav-older" class="article-nav-link-wrap">

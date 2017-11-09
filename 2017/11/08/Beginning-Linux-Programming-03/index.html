@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>非著名林峰</title>
+  <title>beginning-linux-programming-03 | 非著名林峰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="c,c++,java,python,linux,touch,fingerprint,lcm" />
@@ -11,16 +11,18 @@
   
   
   
-  <meta name="description" content="Keep foolish keep hungry.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="非著名林峰">
-<meta property="og:url" content="https://linfeng1990.github.io/index.html">
+  <meta name="description" content="文件操作 文件和设备 系统调用 库函数 底层文件访问 管理文件 标准I/O库 格式化输入输出 文件和目录的维护 扫描目录 错误及处理 /proc 文件系统 fcntl和mmap  Linux 文件结构5个基本函数————open，close，read，write和ioctl. 底层文件访问 0: 标准输入 1： 标准输出 2： 标准错误  write 系统调用12#include &amp;lt;unis">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beginning-Linux-Programming-03">
+<meta property="og:url" content="https://linfeng1990.github.io/2017/11/08/Beginning-Linux-Programming-03/index.html">
 <meta property="og:site_name" content="非著名林峰">
-<meta property="og:description" content="Keep foolish keep hungry.">
+<meta property="og:description" content="文件操作 文件和设备 系统调用 库函数 底层文件访问 管理文件 标准I/O库 格式化输入输出 文件和目录的维护 扫描目录 错误及处理 /proc 文件系统 fcntl和mmap  Linux 文件结构5个基本函数————open，close，read，write和ioctl. 底层文件访问 0: 标准输入 1： 标准输出 2： 标准错误  write 系统调用12#include &amp;lt;unis">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-09T02:45:08.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="非著名林峰">
-<meta name="twitter:description" content="Keep foolish keep hungry.">
+<meta name="twitter:title" content="Beginning-Linux-Programming-03">
+<meta name="twitter:description" content="文件操作 文件和设备 系统调用 库函数 底层文件访问 管理文件 标准I/O库 格式化输入输出 文件和目录的维护 扫描目录 错误及处理 /proc 文件系统 fcntl和mmap  Linux 文件结构5个基本函数————open，close，read，write和ioctl. 底层文件访问 0: 标准输入 1： 标准输出 2： 标准错误  write 系统调用12#include &amp;lt;unis">
   
     <link rel="alternate" href="/atom.xml" title="非著名林峰" type="application/atom+xml">
   
@@ -49,11 +51,13 @@
   <link rel="stylesheet" href="/css/bootstrap.css" >
 
   
-    <link rel="stylesheet" href="/css/home.css" >
+    <link rel="stylesheet" href="/css/dialog.css">
   
 
   
 
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
   
 
   
@@ -64,352 +68,111 @@
 
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
-  
-    <header id="header">
-
-	<!-- 背景图模式 -->
-	
-
-    
-      <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
-
-      <!-- Support rolling -->  
-        
-        <section class="awSlider">
-          <div class="carousel slide carousel-fade " data-ride="carousel">
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-               
-                  
-                    <div class="item active">
-                  
-                    <img id="carousel-img0" src="/css/images/home-bg.jpg">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img0 = new Image();
-                      var imageTag0 = document.getElementById("carousel-img0");
-                      img0.src = imageTag0.src;
-                      img0.onload=function(){
-                        if (img0.width / img0.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag0.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag0.style.height = document.body.clientHeight + "px";
-                          imageTag0.style.marginLeft = -(document.body.clientHeight * img0.width / img0.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-                  
-                    <div class="item">
-                  
-                    <img id="carousel-img1" src="/css/images/sample.jpg">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img1 = new Image();
-                      var imageTag1 = document.getElementById("carousel-img1");
-                      img1.src = imageTag1.src;
-                      img1.onload=function(){
-                        if (img1.width / img1.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag1.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag1.style.height = document.body.clientHeight + "px";
-                          imageTag1.style.marginLeft = -(document.body.clientHeight * img1.width / img1.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-                  
-                    <div class="item">
-                  
-                    <img id="carousel-img2" src="/css/images/sample1.jpg">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img2 = new Image();
-                      var imageTag2 = document.getElementById("carousel-img2");
-                      img2.src = imageTag2.src;
-                      img2.onload=function(){
-                        if (img2.width / img2.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag2.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag2.style.height = document.body.clientHeight + "px";
-                          imageTag2.style.marginLeft = -(document.body.clientHeight * img2.width / img2.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-                  
-                    <div class="item">
-                  
-                    <img id="carousel-img3" src="https://source.unsplash.com/collection/954550/1920x1080">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img3 = new Image();
-                      var imageTag3 = document.getElementById("carousel-img3");
-                      img3.src = imageTag3.src;
-                      img3.onload=function(){
-                        if (img3.width / img3.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag3.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag3.style.height = document.body.clientHeight + "px";
-                          imageTag3.style.marginLeft = -(document.body.clientHeight * img3.width / img3.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Geri</span>
-            </a>
-            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">İleri</span>
-            </a>
-          </div>
-        </section>
-        <script>
-          $('section.awSlider .carousel').carousel({
-              pause: '',
-              interval: 5000
-          });
-          var startImage = $('section.awSlider .item.active > img').attr('src');
-          $('section.awSlider .carousel').on('slid.bs.carousel', function () {
-              var bscn = $(this).find('.item.active > img').attr('src');
-              $('section.awSlider > img').attr('src', bscn);
-          });
-        </script>
-      
-
-    
- 
-
-
-    <canvas width="100%" height="100%"></canvas>
-    <script>
-      var c = document.getElementsByTagName('canvas')[0],
-          x = c.getContext('2d'),
-          w = window.innerWidth,
-          h = window.innerHeight,
-          pr = window.devicePixelRatio || 1,
-          f = 90,
-          q,
-          m = Math,
-          r = 0,
-          u = m.PI*2,
-          v = m.cos,
-          z = m.random
-      c.width = w*pr
-      c.height = h*pr
-      x.scale(pr, pr)
-      x.globalAlpha = 0.6
-
-      <!-- 折线Polyline背景 -->
-      
-		 function redraw(){
-		 	var pattern = Trianglify({
-				width: window.innerWidth,
-				height: window.innerHeight
-			});
-            pattern.canvas(c)
-        }
-        document.getElementById("intrologo").onclick = redraw
-        document.getElementById("intrologo").ontouchstart = redraw
-		redraw()
-      
-    </script>
-    
-
-    
-      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
-    
-
-        
-          <div class="homelogoback"  style="border: 1px solid #404040;" >
-            <h1><a href="#content" id="logo">非著名林峰</a></h1>
-            <h3>Keep foolish keep hungry.</h3>
-            <h5>feng.lin</h5>
-            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
-          </div>
-        
-    
-    </div>
-  </div>
-
-  <!-- 自适应主页背景大图 -->
-  
-
- <!-- home_logo_image居中 -->
- 
-    <script>
-        var homelogodiv = document.getElementById("homelogo");
-        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
-          homelogodiv.style.width = document.body.clientWidth + "px";
-          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
-        } else {
-          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
-          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
-        }
-    </script>
-  
-
-  <div class="intro-navigate">
-      <p class="navigater-list">
-        
-          <a id="beautifont" class="main-nav-link" href="/">首页</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/archives">归档</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/categories">分类</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/tags">标签</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/books">书单</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/resume">简历</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/about">关于</a>
-        
-      </p>
-  </div>
-
-</header>
   
   <div id="container">
     <div id="wrap">
       
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+
+          <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="130px" height="130px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">标签</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/books">书单</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/resume">简历</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+</header>
+
+
+
+      
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;">
-  
-    <article id="post-Beginning-Linux-Programming-02"  class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-Beginning-Linux-Programming-03" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/01/Beginning-Linux-Programming-02/">Beginning Linux Programming 02</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/11/01/Beginning-Linux-Programming-02/" class="article-date">
-	  <time datetime="2017-10-31T16:52:25.000Z" itemprop="datePublished">2017-11-01</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Linux-Programming/">Linux Programming</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="shell-程序设计"><a href="#shell-程序设计" class="headerlink" title="shell 程序设计"></a>shell 程序设计</h1><h2 id="管道和重定向"><a href="#管道和重定向" class="headerlink" title="管道和重定向"></a>管道和重定向</h2><h3 id="重定向输出"><a href="#重定向输出" class="headerlink" title="重定向输出"></a>重定向输出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//把ls命令输出保存在文件lsoutput.txt文件中</div><div class="line">$ ls -l &gt; lsoutput.txt</div><div class="line"></div><div class="line">// 用&gt;&gt;操作符把ps命令的输出内容附件到文件尾部</div><div class="line">$ ps &gt;&gt; lsoutput.txt</div></pre></td></tr></table></figure>
-<h2 id="shell-的语法"><a href="#shell-的语法" class="headerlink" title="shell 的语法"></a>shell 的语法</h2><ul>
-<li>变量： 字符串、数字、环境和参数</li>
-<li>条件： shell 中的bool值</li>
-<li>程序控制： if、elif、for、while、until、case</li>
-<li>命令列表</li>
-<li>函数</li>
-<li>shell 内置命令</li>
-<li>获取命令的执行结果</li>
-<li>here文档</li>
-</ul>
-<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><pre><code>区分大小写，不需要声明，默认被看做字符串并以字符串存储。
-</code></pre><h3 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h3><pre><code>检查一个文件是否存在： test -f &lt;filename&gt;。
-test 使用条件的类型归为3类: 字符串的比较、算术比较和文件相关的条件测试。
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">test condition/cmd ;then</div><div class="line">...</div><div class="line">else</div><div class="line">...</div><div class="line">fi</div></pre></td></tr></table></figure>
-</code></pre><h3 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h3><ol>
-<li><p>if 语句</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if [[ condition ]]; then</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">elif [[ condition ]]; then</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">else</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">fi</div></pre></td></tr></table></figure>
-</li>
-<li><p>for 语句</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for variable in value; do</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">done</div></pre></td></tr></table></figure>
-</li>
-<li><p>while</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">while [[ condition ]]; do</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">done</div></pre></td></tr></table></figure>
-</li>
-<li><p>until</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">until [[ condition ]]; do</div><div class="line"><span class="meta">  #</span>statements</div><div class="line">done</div></pre></td></tr></table></figure>
-</li>
-<li><p>case</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">case word in</div><div class="line">  pattern )</div><div class="line">    ;;</div><div class="line">esac</div></pre></td></tr></table></figure>
-</li>
-<li><p>命令列表</p>
-<p> AND 列表</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">statements1 &amp;&amp; statements2 &amp;&amp; ...</div></pre></td></tr></table></figure>
-<p> OR 列表</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">statements1 || statements2 || ...</div></pre></td></tr></table></figure>
-</li>
-<li><p>语句块<br>如：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">get_confirm &amp;&amp; &#123;</div><div class="line">  grep -v "$cdcatnum" $tracks_file &gt; $temp_file</div><div class="line">  cat $temp_file &gt; $tracks_file</div><div class="line">  echo</div><div class="line">  add_record_tracks</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function_name () &#123;</div><div class="line">  statements</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><p>： 命令是一个空命令，相当于true</p>
-<p>continue</p>
-<p>. 在当前目录中执行</p>
-<p>echo</p>
-<p>eval:允许对参数进行求值</p>
-<p>exec:将当前的shell替换为一个不同的程序</p>
-<p>exit： 126文件不可执行/127命令未找到/128 出现一个信号</p>
-<p>export： 将作为他参数的变量导出到子shell中，并使之在子shell中有效</p>
-<p>expr: 将它的参数当做一个表达式来求值</p>
-<p>printf： “format string” parameter1 parameter2 …</p>
-<p>set: 为shell设置参数变量</p>
-<p>shift： 左移参数</p>
-<p>trap：指定在接收到信号后要采取的行动</p>
-<p>unset： 从环境中删除变量或者函数</p>
-<p>find： find / -mount -name test -print</p>
-<pre><code>find [path] [options] [tests] [actions]
-</code></pre><p>grep: 使用一个选项、一个要匹配的模式和要搜索的文件</p>
-<pre><code>grep [options] PATTERN [FILES]
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-Beginning-Linux-Programming-03"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/08/Beginning-Linux-Programming-03/">Beginning-Linux-Programming-03</a>
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Beginning-Linux-Programming-03
     </h1>
   
 
@@ -425,6 +188,12 @@ test 使用条件的类型归为3类: 字符串的比较、算术比较和文件
     <a class="article-category-link" href="/categories/Linux-Programming/">Linux Programming</a>
 
       
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
     </div>
     <div class="article-entry" itemprop="articleBody">
       
@@ -517,285 +286,30 @@ test 使用条件的类型归为3类: 字符串的比较、算术比较和文件
     <footer class="article-footer">
       
       
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-Markdown"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/01/Markdown/">Markdown</a>
-    </h1>
-  
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
 
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/01/Markdown/" class="article-date">
-	  <time datetime="2017-09-30T16:31:00.000Z" itemprop="datePublished">2017-10-01</time>
-	</a>
+		       if (typeof LivereTower === 'function') { return; }
 
-      
-    <a class="article-category-link" href="/categories/Technology/">Technology</a><a class="article-category-link" href="/categories/Technology/Github/">Github</a>
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
 
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/gallery/markdown.jpg" alt=""></p>
-<p>A markdown example shows how to write a markdown file. This document integrates core syntax and extensions (GMF).</p>
-<ul>
-<li><a href="#block-elements">Block Elements</a><ul>
-<li><a href="#paragraphs-and-line-breaks">Paragraphs and Line Breaks</a></li>
-<li><a href="#headers">Headers</a></li>
-<li><a href="#blockquotes">Blockquotes</a></li>
-<li><a href="#lists">Lists</a></li>
-<li><a href="#code-blocks">Code Blocks</a></li>
-<li><a href="#horizontal-rules">Horizontal Rules</a></li>
-<li><a href="#table">Table</a></li>
-</ul>
-</li>
-<li><a href="#span-elements">Span Elements</a><ul>
-<li><a href="#links">Links</a></li>
-<li><a href="#emphasis">Emphasis</a></li>
-<li><a href="#code">Code</a></li>
-<li><a href="#images">Images</a></li>
-<li><a href="#strikethrough">Strikethrough</a></li>
-</ul>
-</li>
-<li><a href="#miscellaneous">Miscellaneous</a><ul>
-<li><a href="#automatic-links">Automatic Links</a></li>
-<li><a href="#backslash-escapes">Backslash Escapes</a></li>
-</ul>
-</li>
-<li><a href="#inline-html">Inline HTML</a></li>
-</ul>
-        <!-- 
-A markdown example shows how to write a markdown file. This document integrates core syntax and extensions (GMF).
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
 
-Block Elements
-Paragraphs and Line Breaks
-Headers
-Blockquotes
-Lists
-Code Blocks
-H......  -->
-        <p class="article-more-link">
-          <a href="/2017/10/01/Markdown/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
 
-<!-- Table of Contents -->
-
-  
-    <article id="post-【Machine Learning】机器学习：简明入门指南"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/04/【Machine Learning】机器学习：简明入门指南/">【Machine Learning】机器学习：简明入门指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/04/【Machine Learning】机器学习：简明入门指南/" class="article-date">
-	  <time datetime="2017-10-04T00:32:55.000Z" itemprop="datePublished">2017-10-04</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>本文是一篇转载自<a href="http://blog.jobbole.com/67616/" target="_blank" rel="external"><strong>伯乐在线的译文</strong></a>，英文原文是这里：<a href="https://medium.com/code-poet/80ea3ec3c471" target="_blank" rel="external"><strong>Machine Learning is Fun!</strong> — by Adam Geitgey</a></p>
-</blockquote>
-<p>在听到人们谈论机器学习的时候，你是不是对它的涵义只有几个模糊的认识呢？你是不是已经厌倦了在和同事交谈时只能一直点头？让我们改变一下吧！</p>
-<p>本指南的读者对象是所有对机器学习有求知欲但却不知道如何开头的朋友。我猜很多人已经读过了<a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank" rel="external">“机器学习” ——维基百科词条</a>，倍感挫折，以为没人能给出一个高层次的解释。本文就是你们想要的东西。</p>
-<p>本文目标在于平易近人，这意味着文中有大量的概括。但是谁在乎这些呢？只要能让读者对于ML更感兴趣，任务也就完成了。</p>
-        <!-- 
-本文是一篇转载自伯乐在线的译文，英文原文是这里：Machine Learning is Fun! — by Adam Geitgey
-
-在听到人们谈论机器学习的时候，你是不是对它的涵义只有几个模糊的认识呢？你是不是已经厌倦了在和同事交谈时只能一直点头？让我们改变一下吧！
-本指南的读者对象是所有对机器学习有求知欲但却不知道如何开头的朋友。我猜很多人已经读过了“机器学习” ——维基百科词条，倍......  -->
-        <p class="article-more-link">
-          <a href="/2017/10/04/【Machine Learning】机器学习：简明入门指南/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-BAT人才体系的职位层级、薪酬、晋升标准大全"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/02/BAT人才体系的职位层级、薪酬、晋升标准大全/">BAT人才体系的职位层级、薪酬、晋升标准</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/02/BAT人才体系的职位层级、薪酬、晋升标准大全/" class="article-date">
-	  <time datetime="2017-10-02T03:06:00.000Z" itemprop="datePublished">2017-10-02</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/BAT/">BAT</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <img src="/2017/10/02/BAT人才体系的职位层级、薪酬、晋升标准大全/01.jpg" alt="&nbsp;" title="&nbsp;">
-<blockquote>
-<p>互联网圈有这么一句话：百度的技术，阿里的运营，腾讯的产品。那么代表互联网三座大山的BAT，内部人才体系有什么区别呢？可以先看看这个话题<a href="https://www.zhihu.com/question/27108669" target="_blank" rel="external">百度、腾讯和阿里内部的级别和薪资待遇是什么样的？</a></p>
-</blockquote>
-<h3 id="★-腾讯-★"><a href="#★-腾讯-★" class="headerlink" title="★ 腾讯 ★"></a><strong>★ 腾讯 ★</strong></h3><h4 id="1、职级"><a href="#1、职级" class="headerlink" title="1、职级"></a><strong>1、职级</strong></h4><p>腾讯职级体系分6级，最低1级，最高6级。同时按照岗位又划分为四大通道，内部也叫“族”，比如：</p>
-<p>产品/项目通道，简称P族<br>技术通道，简称T族<br>市场通道，简称M族<br>职能通道，简称S族</p>
-<p>以T族为例，分别为：</p>
-<ul>
-<li><p>T1：助理工程师 （一般为校招新人）</p>
-</li>
-<li><p>T2：工程师</p>
-</li>
-<li><p>T3：高级工程师 3-1相当于阿里的p6+到p7（能力强可能到p7）</p>
-</li>
-<li><p>T4：专家工程师</p>
-</li>
-<li><p>T5：科学家</p>
-</li>
-<li><p>T6：首席科学家</p>
-</li>
-</ul>
-        <!-- 
-
-互联网圈有这么一句话：百度的技术，阿里的运营，腾讯的产品。那么代表互联网三座大山的BAT，内部人才体系有什么区别呢？可以先看看这个话题百度、腾讯和阿里内部的级别和薪资待遇是什么样的？
-
-★ 腾讯 ★1、职级腾讯职级体系分6级，最低1级，最高6级。同时按照岗位又划分为四大通道，内部也叫“族”，比如：
-产品/项目通道，简称P族技术通道，简称T族市场通道，简称M族职能通道，简称S族
-以T族为例......  -->
-        <p class="article-more-link">
-          <a href="/2017/10/02/BAT人才体系的职位层级、薪酬、晋升标准大全/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BAT/">BAT</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-Beginning-Linux-Programming-01"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/10/31/Beginning-Linux-Programming-01/">Beginning Linux Programming 01</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/10/31/Beginning-Linux-Programming-01/" class="article-date">
-	  <time datetime="2017-10-31T15:11:11.000Z" itemprop="datePublished">2017-10-31</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Linux-Programming/">Linux Programming</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Linux-程序设计"><a href="#Linux-程序设计" class="headerlink" title="Linux 程序设计"></a>Linux 程序设计</h2><h3 id="Linux程序"><a href="#Linux程序" class="headerlink" title="Linux程序"></a>Linux程序</h3><ul>
-<li>/bin: 二进制文件，用于存放启动系统时用到的程序</li>
-<li>/usr/bin: 用户二进制文件目录，用于存放用户使用的标准程序</li>
-<li>/usr/local/bin: 本地二进制文件目录，用于存放软件安装程序</li>
-</ul>
-<h3 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h3><p>vim,Emacs</p>
-<h3 id="C编译器"><a href="#C编译器" class="headerlink" title="C编译器"></a>C编译器</h3><p>GCC</p>
-<blockquote>
-<p>测试程序,保存为hello.c文件</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World\n"</span>);</div><div class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>编译、链接、运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ gcc -o hello hello.c</div><div class="line">$ ./hello</div></pre></td></tr></table></figure>
-<h3 id="开发系统引导"><a href="#开发系统引导" class="headerlink" title="开发系统引导"></a>开发系统引导</h3><h4 id="应用程序"><a href="#应用程序" class="headerlink" title="应用程序"></a>应用程序</h4><h4 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h4><p>可以用 -I标志来包含保存在子目录或非标位置中的头文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gcc -I/usr/openwin/include/ fred.c</div></pre></td></tr></table></figure>
-<p>grep 命令搜索定义和函数原型如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ grep EXIT_ *h //在当前目录下所有的.h文件中搜索“EXIT_”字符串</div></pre></td></tr></table></figure></p>
-<h4 id="库文件"><a href="#库文件" class="headerlink" title="库文件"></a>库文件</h4><ul>
-<li>.a 静态函数库</li>
-<li>.so 共享函数库</li>
-</ul>
-<img src="/2017/10/31/Beginning-Linux-Programming-01/lib.png" alt="&nbsp;" title="&nbsp;">
-
-      
-    </div>
-    <footer class="article-footer">
-      
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
@@ -803,18 +317,33 @@ H......  -->
     </footer>
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/01/Beginning-Linux-Programming-02/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Beginning Linux Programming 02</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 <!-- Table of Contents -->
 
-  
-
-
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件操作"><span class="nav-number">1.</span> <span class="nav-text">文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-文件结构"><span class="nav-number">1.1.</span> <span class="nav-text">Linux 文件结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#底层文件访问"><span class="nav-number">1.2.</span> <span class="nav-text">底层文件访问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#write-系统调用"><span class="nav-number">1.2.1.</span> <span class="nav-text">write 系统调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#read-系统调用"><span class="nav-number">1.2.2.</span> <span class="nav-text">read 系统调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#open"><span class="nav-number">1.2.3.</span> <span class="nav-text">open</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#close"><span class="nav-number">1.2.4.</span> <span class="nav-text">close</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ioctl"><span class="nav-number">1.2.5.</span> <span class="nav-text">ioctl</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Standard-I-O-Library"><span class="nav-number">1.3.</span> <span class="nav-text">The Standard I/O Library</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fopen"><span class="nav-number">1.3.1.</span> <span class="nav-text">fopen</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fread"><span class="nav-number">1.3.2.</span> <span class="nav-text">fread</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fwrite"><span class="nav-number">1.3.3.</span> <span class="nav-text">fwrite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fcolse"><span class="nav-number">1.3.4.</span> <span class="nav-text">fcolse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fflush"><span class="nav-number">1.3.5.</span> <span class="nav-text">fflush</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fseek"><span class="nav-number">1.3.6.</span> <span class="nav-text">fseek</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fgetc-getc-and-getchar"><span class="nav-number">1.3.7.</span> <span class="nav-text">fgetc, getc, and getchar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fgets-and-gets"><span class="nav-number">1.3.8.</span> <span class="nav-text">fgets and gets</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Formatted-Input-and-Output"><span class="nav-number">1.4.</span> <span class="nav-text">Formatted Input and Output</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#printf-fprintf-and-sprintf"><span class="nav-number">1.4.1.</span> <span class="nav-text">printf, fprintf, and sprintf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scanf-fscanf-and-sscanf"><span class="nav-number">1.4.2.</span> <span class="nav-text">scanf, fscanf, and sscanf</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-and-Directory-Maintenance"><span class="nav-number">1.5.</span> <span class="nav-text">File and Directory Maintenance</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">1.5.1.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chown"><span class="nav-number">1.5.2.</span> <span class="nav-text">chown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unlink-link-and-symlink"><span class="nav-number">1.5.3.</span> <span class="nav-text">unlink, link, and symlink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir-and-rmdir"><span class="nav-number">1.5.4.</span> <span class="nav-text">mkdir and rmdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Advanced-Topics-fcntl-and-mmap"><span class="nav-number">1.5.5.</span> <span class="nav-text">Advanced Topics: fcntl and mmap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fcntl"><span class="nav-number">1.5.6.</span> <span class="nav-text">fcntl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mmap"><span class="nav-number">1.5.7.</span> <span class="nav-text">mmap</span></a></li></ol></li></ol></li></ol>
+    
+    </div>
+  </aside>
 </section>
         
       </div>
-      
-        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
       
       <footer id="footer">
   
@@ -910,9 +439,9 @@ H......  -->
 <script src="/js/scripts.js"></script>
 
 
-  <script src="/js/home.js"></script>
 
 
+  <script src="/js/dialog.js"></script>
 
 
 
@@ -997,6 +526,8 @@ H......  -->
   
   <a id="rocket" href="#top" class=""></a>
   <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
   
 </body>
 </html>
